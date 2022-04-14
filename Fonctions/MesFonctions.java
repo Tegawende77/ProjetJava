@@ -1,3 +1,5 @@
+package Fonctions;
+
 
 ///////////// Les Importations des differentes librairies/////////////////////////////
 import java.util.ArrayList;
@@ -6,7 +8,10 @@ import java.util.Scanner;
 ///////////////////// Definition de la classe MesFonctions //////////////////////////
 
 public class MesFonctions{
-  
+
+    public MesFonctions(){
+		/////
+    }
     public int maximum(int a, int b){
         return a >= b ? a : b ;
     }
@@ -16,9 +21,10 @@ public class MesFonctions{
     }
 
     public int factoriel(int n){
+        ///////// SOLUTION RECURSIVE
         int fact = 1 ;
         if(n != 1 && n != 0){
-           while(n < 0){
+           while(n > 0){
              fact = fact * n ;
              n = n - 1 ;
             }
@@ -27,7 +33,7 @@ public class MesFonctions{
     }
 
     public void estPalindrome(String s){
-        //////// FONCTION ITERATIVE
+        //////// SOLUTION ITERATIVE
 
                /* On teste le premier caractere avec le dernier
         et s'ils sont egaux, le programme continu
@@ -49,10 +55,10 @@ public class MesFonctions{
            i++;
         }
         if(egale ==  true){
-          System.out.println(s + " est un palindrome");
+          System.out.println(s +" est un palindrome");
         }
         else{
-            System.out.println(s + " n'est pas un palindrome");
+            System.out.println(s +" n'est pas un palindrome");
         }
     }
 
